@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/08 11:36:14 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/02/12 17:47:11 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/02/13 11:50:11 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,10 @@ int				ft_get_ant(char *line, t_struct *pos)
 			flag = 1;
 		i++;
 	}
-	pos->ant_total = ft_atoi(line);
-	if (pos->ant_total > 0 && flag == 0)
+	if (ft_strlen(line) > 10)
+		return (-1);
+	pos->ant_total = ft_atol(line);
+	if (pos->ant_total > 0 && pos->ant_total < INT_MAX && flag == 0)
 		return (1);
 	return (-1);
 }

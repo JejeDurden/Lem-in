@@ -6,7 +6,7 @@
 /*   By: jdesmare <jdesmare@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/09 08:47:37 by jdesmare          #+#    #+#             */
-/*   Updated: 2017/02/13 08:14:52 by jdesmare         ###   ########.fr       */
+/*   Updated: 2017/02/13 13:16:50 by jdesmare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ t_struct		*ft_get_infos(t_hashtable *hashtable, t_struct *pos)
 			ret = ft_get_tube(line, hashtable);
 		free(line);
 	}
-	if (pos->start == NULL || pos->end == NULL || ret < 0)
+	if (pos->start == NULL || pos->end == NULL)
 		return (NULL);
 	return (pos);
 }
